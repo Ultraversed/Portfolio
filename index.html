@@ -68,10 +68,6 @@
       opacity: 1;
       transform: translateY(0);
     }
-    .fade-in.fade-out {
-      opacity: 0;
-      transform: translateY(-40px);
-    }
 
     .hero {
       text-align: center;
@@ -248,53 +244,44 @@
     <section id="skills" class="fade-in">
       <h2>Skills</h2>
       <div class="skills">
-        <span>HTML</span>
-        <span>CSS</span>
-        <span>JavaScript</span>
-        <span>Bootstrap</span>
-        <span>React</span>
-        <span>Github</span>
-        <span>Java</span>
+        <span>HTML</span><span>CSS</span><span>JavaScript</span>
+        <span>Bootstrap</span><span>React</span><span>Github</span><span>Java</span>
       </div>
     </section>
     
-    <section id="projects" class="fade-in">
+    <!-- Certificates Section -->
+    <section id="certificates" class="fade-in">
       <h2>Certificates</h2>
       <div class="projects">
         <div class="project-card">
-          <h3>Web development</h3>
-          <a href="https://api2.sololearn.com/v2/certificates/CC-MM8NESVT/image/png?t=638722361441096640" target="_blank" class="btn" aria-label="Web developement">View Certificate</a>
+          <h3>Web Development</h3>
+          <a href="#" class="btn toggle-btn" data-img="https://api2.sololearn.com/v2/certificates/CC-MM8NESVT/image/png?t=638722361441096640">View Certificate</a>
+          <div class="certificate-container" style="display:none; margin-top:10px;"></div>
         </div>
         <div class="project-card">
-          <h3>Ai for beginners</h3>
-          <a href="e4a66fac-66ed-4b5d-b485-5eced4a8182a.pdf" target="_blank" class="btn" aria-label="Ai">View Certificate</a>
+          <h3>AI for Beginners</h3>
+          <a href="#" class="btn toggle-btn" data-img="certificate.png">View Certificate</a>
+          <div class="certificate-container" style="display:none; margin-top:10px;"></div>
         </div>
         <div class="project-card">
           <h3>Java</h3>
-          <a href="https://api2.sololearn.com/v2/certificates/CC-EEN8VRVT/image/png?t=638722361266432800"target="_blank" class="btn" aria-label="Java">View Certificate</a>
+          <a href="#" class="btn toggle-btn" data-img="https://api2.sololearn.com/v2/certificates/CC-EEN8VRVT/image/png?t=638722361266432800">View Certificate</a>
+          <div class="certificate-container" style="display:none; margin-top:10px;"></div>
         </div>
         <div class="project-card">
-          <h3>Vibe coding</h3>
-          <a href="https://api2.sololearn.com/v2/certificates/CC-MT5ABV65/image/png?t=638923341458548460" target="_blank" class="btn" aria-label="Vibe Coding">View Certificate</a>
+          <h3>Vibe Coding</h3>
+          <a href="#" class="btn toggle-btn" data-img="https://api2.sololearn.com/v2/certificates/CC-MT5ABV65/image/png?t=638923341458548460">View Certificate</a>
+          <div class="certificate-container" style="display:none; margin-top:10px;"></div>
         </div>
       </div>
     </section>
-    
 
     <!-- Projects Section -->
     <section id="projects" class="fade-in">
       <h2>Projects</h2>
       <div class="projects">
-        <div class="project-card">
-          <h3>Project 1</h3>
-          <p>A crypto website with a landing page, sign-in, login, forgot password and description pages.</p>
-          <a href="https://crypt-ultra.vercel.app/" class="btn" aria-label="View Project 1">View Project</a>
-        </div>
-        <div class="project-card">
-          <h3>Project 2</h3>
-          <p>Description of project 2 goes here.</p>
-          <a href="#" class="btn" aria-label="View Project 2">View Project</a>
-        </div>
+        <div class="project-card"><h3>Project 1</h3><p>A crypto website with a login page, sign in page, forgot password page and well organised css properties at landing page. Technologies used includes, bootstrap, javascript, html/css and awesome5!</p><a href="https://crypt-ultra.vercel.app/" class="btn">View Project</a></div>
+        <div class="project-card"><h3>Project 2</h3><p>A webpage for a student association that receives payment via paystack integration!</p><a href="https://namssn-kops.vercel.app/" class="btn">View Project</a></div>
       </div>
     </section>
 
@@ -307,48 +294,64 @@
     <!-- Contact Section -->
     <section id="contact" class="contact fade-in">
       <h2>Contact</h2>
-      <p>📧 <a href="kingsleyjohnholt@gmail.com" style="text-decoration:none; color:green;">kingsleyjohnholt@gmail.com</a></p>
-      <p>📱 <a href = "https://wa.me/+2349015389986" style="text-decoration:none; color:green;">+234 901 538 9986 (WhatsApp)</a></p>
+      <p>📧 <a href="mailto:kingsleyjohnholt@gmail.com">kingsleyjohnholt@gmail.com</a></p>
+      <p>📱 <a href="https://wa.me/+2349015389986">+234 901 538 9986 (WhatsApp)</a></p>
     </section>
   </div>
 
 <script>
-  // Simple fade-in on scroll (one time, no fade-out)
-  const faders = document.querySelectorAll('.fade-in');
+document.querySelectorAll('.toggle-btn').forEach(btn => {
+  btn.addEventListener('click', function(e) {
+    e.preventDefault();
+    const card = this.parentElement;
+    const container = card.querySelector('.certificate-container');
+    const fileUrl = this.getAttribute('data-img');
 
-  const appearOptions = { threshold: 0.2 };
-
-  const appearOnScroll = new IntersectionObserver((entries, observer) => {
-    entries.forEach(entry => {
-      if (entry.isIntersecting) {
-        entry.target.classList.add('show');
-        observer.unobserve(entry.target); // fade-in only once
+    if (container.style.display === 'none' || container.style.display === '') {
+      if (fileUrl.endsWith('.pdf')) {
+        container.innerHTML = `<iframe src="${fileUrl}" style="width:100%; height:300px; border:1px solid #444; border-radius:5px;"></iframe>`;
+      } else {
+        container.innerHTML = `<img src="${fileUrl}" style="width:100%; height:100%; object-fit:contain; border-radius:5px;" />`;
       }
-    });
-  }, appearOptions);
-
-  faders.forEach(fader => {
-    appearOnScroll.observe(fader);
-  });
-
-  // Theme toggle with localStorage
-  const toggleSwitch = document.getElementById('theme-toggle');
-  const currentTheme = localStorage.getItem('theme');
-
-  if (currentTheme === 'light') {
-    document.body.classList.add('light-mode');
-    toggleSwitch.checked = true;
-  }
-
-  toggleSwitch.addEventListener('change', () => {
-    if (toggleSwitch.checked) {
-      document.body.classList.add('light-mode');
-      localStorage.setItem('theme', 'light');
+      container.style.display = 'block';
+      this.textContent = 'Hide Certificate';
     } else {
-      document.body.classList.remove('light-mode');
-      localStorage.setItem('theme', 'dark');
+      container.style.display = 'none';
+      container.innerHTML = '';
+      this.textContent = 'View Certificate';
     }
   });
+});
+
+// Fade-in animation
+const faders = document.querySelectorAll('.fade-in');
+const appearOptions = { threshold: 0.2 };
+const appearOnScroll = new IntersectionObserver((entries, observer) => {
+  entries.forEach(entry => {
+    if (entry.isIntersecting) {
+      entry.target.classList.add('show');
+      observer.unobserve(entry.target);
+    }
+  });
+}, appearOptions);
+faders.forEach(fader => appearOnScroll.observe(fader));
+
+// Theme toggle with localStorage
+const toggleSwitch = document.getElementById('theme-toggle');
+const currentTheme = localStorage.getItem('theme');
+if (currentTheme === 'light') {
+  document.body.classList.add('light-mode');
+  toggleSwitch.checked = true;
+}
+toggleSwitch.addEventListener('change', () => {
+  if (toggleSwitch.checked) {
+    document.body.classList.add('light-mode');
+    localStorage.setItem('theme', 'light');
+  } else {
+    document.body.classList.remove('light-mode');
+    localStorage.setItem('theme', 'dark');
+  }
+});
 </script>
 </body>
 </html>

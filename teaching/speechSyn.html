@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Content works</title>
+</head>
+
+<body>
+
+    <input type="text" id="text" placeholder="type something...">
+    <button onclick="speakText()">Speak</button>
+
+    <video id="vid1" autoplay></video>
+    <button onclick="stream()">Start live webcam</button>
+
+    <script>
+        function speakText() {
+            let message = new SpeechSynthesisUtterance(
+                document.getElementById("text").value
+            );
+
+            speechSynthesis.speak(message);
+        }
+
+        function stream(){
+        const webCam =   document.getElementById('vid1');
+        navigator.mediaDevices.getUserMedia({video: true})
+        .then(stream =>{
+            webCam.srcObject = stream;
+        })
+        .catch(error =>{
+            console.error('Error accessing camera:', error);
+        });
+        }
+    </script>
+
+</body>
+</html>

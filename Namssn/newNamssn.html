@@ -1,0 +1,281 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=0.8">
+  <link rel="stylesheet" type="text/css" href="">
+  <title>Welcome to NAMSSN!</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+/* 1. Reset default margins to prevent gaps at the top */
+body { margin: 0; 
+width: 100%;}
+
+/* 2. Style the header as the main container */
+.main-header {
+    position: fixed;   /* Sticks to the viewport */
+    right:0;
+    top: 0;
+    left:0;
+    display: flex;     /* Aligns children side-by-side */
+    justify-content: space-between; /* Logo left, Nav right */
+    align-items: center;
+    background-color: rgb(152, 174, 159, 0.3); /* Add background so content doesn't bleed through */
+    margin: 20px !important;
+    border-radius: 9999px;
+    padding: 10px 20px !important;
+    z-index: 1000;     /* Keeps it above the h1 */
+    box-sizing: border-box;   
+    backdrop-filter: blur(10px);
+    height: auto !important;
+}
+
+/* 3. Clean up the logo container (remove position:fixed) */
+.imgHeadDiv {
+    border-radius: 9999px;
+    background-color: black;
+    padding: 5px 15px;
+    display: flex;
+}
+
+/* 4. Navigation styles */
+nav {
+    display: flex;
+    align-items: center;
+}
+
+.navsHref {
+    margin: 0 15px; /* Better horizontal spacing */
+    text-decoration: none;
+    color: black;
+    border: none;
+    background: none;
+    cursor: pointer;
+    font-size: 1rem;
+}
+
+#navsHrefBut {
+    border-radius: 9999px;
+    background-color: black;
+    width: 110px;
+    height: 50px;
+    color: white;
+    text-align: center;
+    align-content: center;
+    box-sizing: border-box;
+}
+
+#imgUniuyo {
+    border-radius: 9999px;
+}
+
+/* Hamburger Menu */
+.hamburger {
+    display: none;
+    flex-direction: column;
+    cursor: pointer;
+    background: none;
+    border: none;
+}
+
+.hamburger span {
+    width: 35px;
+    height: 3px;
+    background-color: black;
+    margin: 3px 0;
+    transition: 0.5s ease;
+    border-radius: 3px;
+}
+
+/* Mobile Responsiveness */
+@media (max-width: 768px) {
+    .main-header {
+        margin: 10px;
+        padding: 10px 15px;
+    }
+
+    .imgHeadDiv {
+        padding: 3px 10px;
+    }
+
+    .imgHead {
+        height: 30px !important;
+    }
+
+    .hamburger {
+        display: flex;
+    }
+    .hamburger:active{
+        transform: scale(1.05);
+        background-color: transparent;
+        transition-duration: 0.2s;
+    }
+
+    nav {
+        position: absolute;
+        top: 50px;
+        right: 20px;
+        background-color: rgba(39, 215, 95, 0.9);
+        flex-direction: column;
+        width: 200px;
+        border-radius: 10px;
+        padding: 20px;
+        display: flex;
+        opacity: 0;
+        visibility: hidden;
+        transition: opacity 0.1s ease-out, visibility 0.1s ease;
+    }
+
+    nav.active {
+        opacity: 1;
+        visibility: visible;
+    }
+
+    .navsHref {
+        margin: 10px 0;
+        color: black;
+    }
+
+    #navsHrefBut {
+        width: 100%;
+    }
+
+    #headerImg{
+        width: 96%;
+        height: auto;
+    }
+}
+
+
+@media (max-width: 480px) {
+    .main-header {
+        margin: 5px;
+        padding: 8px 10px;
+    }
+
+    .navsHref {
+        font-size: 0.9rem;
+    }
+
+    nav {
+        right: 10px;
+        width: 180px;
+    }
+main{
+    text-align:center;
+}
+#headerImg{
+    width: 96%;
+    height: auto;
+}
+}
+
+.welcome{
+text-align: center; 
+margin-top: 50px; 
+border-radius: 9999px; 
+background-color: green;
+padding: 15px;
+}
+.buttons1{
+/*justify-content: center;*/
+border-radius: 9999px;
+padding: 15px;
+height: 50px;
+width: 240px;
+}
+#button1div{
+display: flex;
+justify-content: center;
+justify-content: flex;
+gap:40px;
+}
+p{
+    width: 80%;
+    margin: 20px auto;
+    font-size: 1.8rem;
+    line-height: 1.6;
+}
+#headerImg{
+    width: 96%;
+    margin-top: 50px;
+    border-radius: 80px;
+}
+h2{
+margin-top: 100px;
+font-weight: 100;
+}
+h1 {
+  font-size: 70px !important;
+  margin: 0 !important;
+  padding: 0 !important;
+}
+#button1{
+background-color: black;
+color: white;
+}
+  </style>
+</head>
+<body>
+<header class="main-header">
+    <div class="imgHeadDiv">
+        <img id="imgUniuyo" class="imgHead" src="images.jpeg" alt="uniuyo logo" height="40">
+        <img class="imgHead" src="namssn.png" alt="namssn logo" height="40">
+    </div>
+
+    <button class="hamburger" id="hamburger">
+        <span></span>
+        <span></span>
+        <span></span>
+    </button>
+
+    <nav id="navMenu"> 
+        <a class="navsHref" href="#home">About us</a>
+        <a class="navsHref" href="#home">Services</a>
+        <a class="navsHref" href="#home">Case study</a>
+        <a class="navsHref" href="#home">Blog</a>
+        <button class="navsHref" id="navsHrefBut" href="#home">Home</button>
+    </nav>
+</header>
+
+<main style="margin-top: 190px; text-align: center;">
+    <section>
+        <span class="welcome">Welcome to NAMSSN!</span>
+<h1 style="text-align: center; margin-top: 20px; font-size: 70px;">Connecting you to the world...</h1>
+<p>We are a team of passionate individuals dedicated to providing top-notch services in the field of software development and technology solutions. Our mission is to empower businesses and individuals with innovative and efficient software solutions that drive growth and success.</p>
+   <div id="button1div">
+    <button id="button1" class="buttons1">Get Started</button>
+    <button class="buttons1">Contact Us</button>
+   </div>
+   <img src="coreTeam.jpeg" alt="mainFlier" width="1000" heigbht="600" id="headerImg">
+</section>
+<h2>What we stand for</h2>
+<div>
+    <span></span>
+    <span></span>
+    <span></span>
+    <span></span>
+    <span></span>
+</div>
+</main>
+
+
+<script>
+    const hamburger = document.getElementById('hamburger');
+    const navMenu = document.getElementById('navMenu');
+
+    hamburger.addEventListener('click', () => {
+        navMenu.classList.toggle('active');
+    });
+
+    // Close menu when a link is clicked
+    document.querySelectorAll('.navsHref').forEach(link => {
+        link.addEventListener('click', () => {
+            navMenu.classList.remove('active');
+        });
+    });
+</script>
+
+</body>
+</html>

@@ -39,7 +39,7 @@ let country = "Nigeria";
 let location = city.concat(", 33, this isn't no error ", country);
 console.log(location);
 
-//Arrays
+//Arrays, array oush is used to add an extra variable to an array
 console.log("\nArrays in JavaScript, push adds elements to an array");
 const fruit=["apple", "banana", "orange"];
 console.log(fruit);
@@ -52,7 +52,7 @@ const removedFruit=fruit.pop();
 console.log(fruit);
 console.log(removedFruit);  
 
-//unshift adds elements to the beginning of an array
+//unshift adds elements to the beginning of an array, array unshift is used  to add elements to the beginning of an array
 console.log("\nUsing unshift method");
 const newLength=fruit.unshift("grape");
 console.log(fruit);
@@ -72,6 +72,7 @@ let last = arr.pop();
 console.log(first, last, arr);
 
 //two-dimensional array
+//two dimensional array is used to store data just like a matrix
 console.log("\nTwo-dimensional array (chessboard representation)");
 let chessboard = [
     ["R", "N", "B", "Q", "K", "B", "N", "R"],
@@ -86,11 +87,12 @@ let chessboard = [
 
 console.log(chessboard[0][3]); // "Q"
 
-/*array distructuring
+/*array destructuring
 What Is Array Destructuring, and How Does It Work?
 Array destructuring is a feature in JavaScript that allows you to extract values from arrays and assign them to variables in a more concise and readable way. It provides a convenient syntax for unpacking array elements into distinct variables.
 This technique is particularly useful when working with arrays and functions that return multiple values. Here is an example of using array destructuring:*/
 console.log("\nArray destructuring");
+fruit.push("pawpaw");
 let [firstFruit, secondFruit, ...otherFruits] = fruit;
 //rest syntax, denoted by three dots (...). It allows you to capture the remaining elements of an array that haven’t been destructured into a new array. Here's how it works:
 console.log(firstFruit);
@@ -126,7 +128,7 @@ console.log(charArray); // ["h", "e", "l", "l", "o"]
 A dash ("-"), which splits the string at each dash.*/
 console.log("\nUsing split with a space as a separator");
 let charArray1 = ["h", "e", "l", "l", "o"];
-charArray.reverse();
+console.log(charArray.reverse());
 console.log(charArray1); // ["o", "l", "l", "e", "h"]
 
 
@@ -139,7 +141,7 @@ console.log(reversedString); // "olleh"
 
 //in conclusion, by using the split(), reverse(), and join() methods together, we can effectively reverse a string in JavaScript. This approach leverages the strengths of both string and array manipulation techniques to achieve the desired result.
 let str1 = "coding";
-let reversed = str.split("").reverse().join("");
+let reversed = str1.split("").reverse().join("");
 console.log(reversed); // "gnidoc"
 
 console.log("hello".split(""));// ["h", "e", "l", "l", "o"]
@@ -263,7 +265,7 @@ Definition: A two-dimensional array is essentially an array of arrays. It's used
 Definition: Array destructuring is a feature in JavaScript that allows you to extract values from arrays and assign them to variables in a more concise and readable way. It provides a convenient syntax for unpacking array elements into distinct variables.*/
 const fruitsi = ["apple", "banana", "orange"];
 
-const [firsti, second, thirdi] = fruits;
+const [firsti, secondi, thirdi] = fruits;
 
 console.log(firsti); // "apple"
 console.log(secondi); // "banana"
@@ -275,7 +277,7 @@ const fruitsq = ["apple", "banana", "orange", "mango", "kiwi"];
 const [firstq, secondq, ...restq] = fruitsq;
 
 console.log(firstq); // "apple"
-console.log(second); // "banana"
+console.log(secondq); // "banana"
 console.log(restq); // ["orange", "mango", "kiwi"]
 
 //Spread Syntax: The spread syntax is used to create shallow copies of an array. It allows you to expand an array into individual elements. This is particularly useful when you want to create a new array that includes all the elements of an existing array, along with additional elements.

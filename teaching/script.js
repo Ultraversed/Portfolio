@@ -27,3 +27,8 @@ let address;
 
 console.log(`The value of Marriedstatus is ${Marriedstatus} and its type is ${typeof Marriedstatus}`);
 //the above is called template literals, it allows us to embed expressions inside string literals, using backticks and ${} syntax.
+let a = 0;
+for (i=0;i<20;i++){
+    a=a+2;
+console.log(a);
+}

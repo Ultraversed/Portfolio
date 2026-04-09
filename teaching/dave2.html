@@ -1,0 +1,325 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>OBSIDIAN PROTOCOL | THE SOVEREIGN ARCHITECT</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&amp;family=Manrope:wght@300;400;500;600;700&amp;family=Inter:wght@400;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            colors: {
+              "on-background": "#e5e2e1",
+              "outline": "#8e8fa3",
+              "on-secondary-fixed": "#2c0051",
+              "on-surface": "#e5e2e1",
+              "primary-fixed-dim": "#bcc2ff",
+              "secondary-container": "#7701d0",
+              "on-secondary": "#480081",
+              "on-tertiary": "#2f3131",
+              "on-tertiary-fixed": "#1a1c1c",
+              "on-primary-container": "#c1c6ff",
+              "secondary-fixed": "#efdbff",
+              "surface-dim": "#131313",
+              "on-secondary-container": "#dcb7ff",
+              "tertiary-fixed-dim": "#c6c6c7",
+              "secondary": "#dcb8ff",
+              "tertiary": "#c6c6c7",
+              "surface-container-low": "#1c1b1b",
+              "outline-variant": "#444557",
+              "on-primary-fixed": "#000b62",
+              "inverse-surface": "#e5e2e1",
+              "tertiary-container": "#545555",
+              "surface-tint": "#bcc2ff",
+              "surface-container-high": "#2a2a2a",
+              "on-secondary-fixed-variant": "#6700b5",
+              "error": "#ffb4ab",
+              "surface-variant": "#353534",
+              "surface-bright": "#3a3939",
+              "on-error-container": "#ffdad6",
+              "surface-container": "#201f1f",
+              "primary-container": "#002dff",
+              "primary": "#bcc2ff",
+              "primary-fixed": "#dfe0ff",
+              "on-primary": "#00179b",
+              "on-error": "#690005",
+              "surface-container-highest": "#353534",
+              "surface": "#131313",
+              "error-container": "#93000a",
+              "inverse-primary": "#2440ff",
+              "tertiary-fixed": "#e2e2e2",
+              "on-primary-fixed-variant": "#0025d8",
+              "on-surface-variant": "#c5c5da",
+              "background": "#131313",
+              "secondary-fixed-dim": "#dcb8ff",
+              "on-tertiary-container": "#cacaca",
+              "surface-container-lowest": "#0e0e0e",
+              "inverse-on-surface": "#313030",
+              "on-tertiary-fixed-variant": "#454747"
+            },
+            fontFamily: {
+              "headline": ["Space Grotesk"],
+              "body": ["Manrope"],
+              "label": ["Inter"]
+            },
+            borderRadius: {"DEFAULT": "0.125rem", "lg": "0.25rem", "xl": "0.5rem", "full": "0.75rem"},
+          },
+        },
+      }
+    </script>
+<style>
+      .material-symbols-outlined {
+        font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+      }
+      .glass-card {
+        background: rgba(119, 1, 208, 0.1);
+        backdrop-filter: blur(12px);
+      }
+      .cyber-glow:hover {
+        box-shadow: 0 0 20px rgba(0, 45, 255, 0.3);
+        border-color: #002DFF;
+      }
+      @keyframes pulse-custom {
+        0% { box-shadow: 0 0 0 0 rgba(0, 45, 255, 0.7); }
+        70% { box-shadow: 0 0 0 15px rgba(0, 45, 255, 0); }
+        100% { box-shadow: 0 0 0 0 rgba(0, 45, 255, 0); }
+      }
+      .animate-pulse-custom {
+        animation: pulse-custom 2s infinite;
+      }
+    </style>
+</head>
+<body class="bg-surface-container-lowest text-on-background font-body selection:bg-primary-container selection:text-on-primary-container">
+<!-- Top Navigation Shell -->
+<nav class="bg-[#0e0e0e]/80 backdrop-blur-xl border-b border-[#444557]/15 shadow-[0_40px_40px_-15px_rgba(0,45,255,0.06)] flex justify-between items-center w-full px-8 py-4 max-w-[1920px] mx-auto z-50 docked full-width top-0 sticky">
+<div class="text-2xl font-black tracking-tighter text-[#F0F0F0] dark:text-[#F0F0F0] font-headline uppercase">
+            OBSIDIAN PROTOCOL
+        </div>
+<div class="hidden md:flex gap-8 font-headline tracking-tighter uppercase text-sm">
+<a class="text-[#002DFF] border-b-2 border-[#002DFF] pb-1" href="#">THE VOID</a>
+<a class="text-[#8e8fa3] hover:text-[#F0F0F0] transition-colors" href="#">THE ARMORY</a>
+<a class="text-[#8e8fa3] hover:text-[#F0F0F0] transition-colors" href="#">INTEL</a>
+<a class="text-[#8e8fa3] hover:text-[#F0F0F0] transition-colors" href="#">COMMAND</a>
+</div>
+<div class="flex items-center gap-4">
+<span class="material-symbols-outlined text-[#8e8fa3] cursor-pointer hover:scale-105 transition-transform" data-icon="notifications">notifications</span>
+<span class="material-symbols-outlined text-[#8e8fa3] cursor-pointer hover:scale-105 transition-transform" data-icon="security">security</span>
+</div>
+</nav>
+<!-- Phase 1: Hero Section (The Gatekeeper) -->
+<section class="relative min-h-screen flex flex-col items-center justify-center overflow-hidden bg-surface-container-lowest px-6">
+<div class="absolute inset-0 z-0">
+<div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[800px] bg-primary-container/5 rounded-full blur-[120px]"></div>
+<img alt="Digital Void" class="w-full h-full object-cover opacity-20 mix-blend-overlay" data-alt="abstract dark background with subtle flowing ethereal blue lines and deep charcoal textures representing a digital void" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCQDZBDED5RYDOTzeivspQYTYC-vAdFQmwsVcuDE3yND_HyFfqR2KQNChslUNFuqcEGXne-t_20P8OB52FoXgHCsbtNMwReU5-AkF5KUMfMmOH9Hv2YSDpp_X-pw7R5K_XJ6OXPBNosfBKnu0CIv-KPTFKwRh-TTn8R41xLW7IsTKVOvg-TMJ2LzKrWpUwoo9Kw84og_aY_0pH2G0WEC309uSEZwzo3kijax13UO4Xu6QNJiOZWlG_1QkY6DgtlmqZLj1K4R8KB7io"/>
+</div>
+<div class="relative z-10 text-center max-w-5xl">
+<p class="font-headline text-primary-fixed-dim tracking-[0.4em] uppercase text-sm mb-6">PROJECT DEVELOPIA // INITIALIZING</p>
+<h1 class="font-headline text-7xl md:text-9xl font-black tracking-tighter text-on-background leading-none mb-8">
+                THE NOISE <br/> <span class="text-transparent bg-clip-text bg-gradient-to-r from-primary-container to-secondary-container">ENDS HERE</span>
+</h1>
+<p class="text-on-surface-variant text-lg md:text-xl max-w-2xl mx-auto mb-12 font-light">
+                Escape the saturation. Access the proprietary architectural framework used by the top 0.1% of digital operatives.
+            </p>
+<button class="group relative px-10 py-5 bg-primary-container text-on-primary-container font-headline font-bold text-lg tracking-widest uppercase hover:scale-105 transition-transform duration-300 animate-pulse-custom">
+                ENTER THE ARMORY
+                <span class="ml-2 material-symbols-outlined align-middle" data-icon="arrow_forward">arrow_forward</span>
+</button>
+</div>
+<div class="absolute bottom-12 left-12 hidden lg:block">
+<div class="flex items-center gap-4 text-outline-variant font-label text-[10px] tracking-widest uppercase">
+<span class="w-12 h-[1px] bg-outline-variant/30"></span>
+                ESTABLISHED MMXXIV
+            </div>
+</div>
+</section>
+<!-- Phase 2: Main Product Section (The Main Hub) -->
+<section class="py-32 px-8 bg-surface relative">
+<div class="max-w-7xl mx-auto">
+<div class="flex flex-col md:flex-row justify-between items-end mb-20 gap-8">
+<div class="max-w-xl">
+<h2 class="font-headline text-5xl font-bold tracking-tighter mb-4 uppercase">DIGITAL WEAPONS</h2>
+<p class="text-on-surface-variant font-body leading-relaxed">Seven specialized protocols designed for rapid deployment and market dominance. These are not courses; they are operational assets.</p>
+</div>
+<div class="font-headline text-primary-container text-8xl opacity-10 font-black">07</div>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+<!-- Weapon 1 -->
+<div class="glass-card p-8 border border-outline-variant/15 hover:scale-105 transition-all duration-500 group cursor-pointer relative overflow-hidden">
+<div class="absolute -right-4 -top-4 w-24 h-24 bg-primary-container/10 rounded-full blur-2xl group-hover:bg-primary-container/20 transition-colors"></div>
+<span class="material-symbols-outlined text-4xl text-primary-container mb-6" data-icon="psychology">psychology</span>
+<h3 class="font-headline text-xl font-bold mb-4">AI PROMPT ENGINEERING</h3>
+<p class="text-on-surface-variant text-sm mb-6 leading-relaxed">Neural command structures to bypass creative blocks and automate high-value cognitive output.</p>
+<div class="flex items-center gap-2 text-primary text-[10px] font-label font-bold tracking-tighter">
+<span class="w-2 h-2 rounded-full bg-secondary"></span> STATUS: DEPLOYED
+                    </div>
+</div>
+<!-- Weapon 2 -->
+<div class="glass-card p-8 border border-outline-variant/15 hover:scale-105 transition-all duration-500 group cursor-pointer">
+<span class="material-symbols-outlined text-4xl text-primary-container mb-6" data-icon="ads_click">ads_click</span>
+<h3 class="font-headline text-xl font-bold mb-4">FACEBOOK ADS ARCHITECT</h3>
+<p class="text-on-surface-variant text-sm mb-6 leading-relaxed">Aggressive scaling protocols and pixel mastery for surgical traffic acquisition.</p>
+<div class="flex items-center gap-2 text-primary text-[10px] font-label font-bold tracking-tighter">
+<span class="w-2 h-2 rounded-full bg-secondary"></span> STATUS: DEPLOYED
+                    </div>
+</div>
+<!-- Weapon 3 -->
+<div class="glass-card p-8 border border-outline-variant/15 hover:scale-105 transition-all duration-500 group cursor-pointer">
+<span class="material-symbols-outlined text-4xl text-primary-container mb-6" data-icon="movie_edit">movie_edit</span>
+<h3 class="font-headline text-xl font-bold mb-4">VIDEO EDITING MASTERY</h3>
+<p class="text-on-surface-variant text-sm mb-6 leading-relaxed">High-retention visual storytelling techniques designed to hijack the dopamine loop.</p>
+<div class="flex items-center gap-2 text-primary text-[10px] font-label font-bold tracking-tighter">
+<span class="w-2 h-2 rounded-full bg-secondary"></span> STATUS: DEPLOYED
+                    </div>
+</div>
+<!-- Weapon 4 -->
+<div class="glass-card p-8 border border-outline-variant/15 hover:scale-105 transition-all duration-500 group cursor-pointer">
+<span class="material-symbols-outlined text-4xl text-primary-container mb-6" data-icon="terminal">terminal</span>
+<h3 class="font-headline text-xl font-bold mb-4">APP CREATION PROTOCOL</h3>
+<p class="text-on-surface-variant text-sm mb-6 leading-relaxed">No-code and low-code frameworks for rapid MVP deployment and asset ownership.</p>
+<div class="flex items-center gap-2 text-primary text-[10px] font-label font-bold tracking-tighter">
+<span class="w-2 h-2 rounded-full bg-secondary"></span> STATUS: DEPLOYED
+                    </div>
+</div>
+<!-- Weapon 5 -->
+<div class="glass-card p-8 border border-outline-variant/15 hover:scale-105 transition-all duration-500 group cursor-pointer">
+<span class="material-symbols-outlined text-4xl text-primary-container mb-6" data-icon="auto_stories">auto_stories</span>
+<h3 class="font-headline text-xl font-bold mb-4">E-BOOK AUTHORING</h3>
+<p class="text-on-surface-variant text-sm mb-6 leading-relaxed">Information product architecture for establishing absolute authority in any niche.</p>
+<div class="flex items-center gap-2 text-primary text-[10px] font-label font-bold tracking-tighter">
+<span class="w-2 h-2 rounded-full bg-secondary"></span> STATUS: DEPLOYED
+                    </div>
+</div>
+<!-- Weapon 6 -->
+<div class="glass-card p-8 border border-outline-variant/15 hover:scale-105 transition-all duration-500 group cursor-pointer">
+<span class="material-symbols-outlined text-4xl text-primary-container mb-6" data-icon="shopping_cart">shopping_cart</span>
+<h3 class="font-headline text-xl font-bold mb-4">AMAZON KDP ENGINE</h3>
+<p class="text-on-surface-variant text-sm mb-6 leading-relaxed">Passive ecosystem development using the world's largest distribution network.</p>
+<div class="flex items-center gap-2 text-primary text-[10px] font-label font-bold tracking-tighter">
+<span class="w-2 h-2 rounded-full bg-secondary"></span> STATUS: DEPLOYED
+                    </div>
+</div>
+<!-- Weapon 7 - Large Feature -->
+<div class="lg:col-span-3 glass-card p-12 border border-outline-variant/15 hover:shadow-[0_0_50px_rgba(0,45,255,0.1)] transition-all flex flex-col md:flex-row gap-12 items-center">
+<div class="md:w-1/2">
+<span class="material-symbols-outlined text-6xl text-primary-container mb-8" data-icon="hub">hub</span>
+<h3 class="font-headline text-3xl font-bold mb-6 tracking-tighter uppercase">FULL-STACK MARKETING COMMAND</h3>
+<p class="text-on-surface-variant text-lg leading-relaxed mb-8">The master protocol. Integrating all weapons into a cohesive, unstoppable digital empire. This is the synthesis of strategy and execution.</p>
+<ul class="space-y-3 font-label text-xs tracking-widest text-[#F0F0F0] uppercase">
+<li class="flex items-center gap-4"><span class="material-symbols-outlined text-primary text-sm" data-icon="check_circle">check_circle</span> End-to-End Funnel Architecture</li>
+<li class="flex items-center gap-4"><span class="material-symbols-outlined text-primary text-sm" data-icon="check_circle">check_circle</span> High-Conversion Copywriting</li>
+<li class="flex items-center gap-4"><span class="material-symbols-outlined text-primary text-sm" data-icon="check_circle">check_circle</span> Scalable Retention Loops</li>
+</ul>
+</div>
+<div class="md:w-1/2 w-full h-64 bg-surface-container rounded-lg overflow-hidden relative">
+<img alt="Tech Hub" class="w-full h-full object-cover grayscale opacity-50" data-alt="high-tech control room interface with multiple holographic displays and blue server lights in a dark futuristic environment" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAlCWT-O55eyD7-E2dtakItfFDWUzEd9kF3njBTTYCE75jbWaFaYCSpTBA9J7PE-Xo1rUQGKf7Q9_e9_WHG-qRV_UW5qmIdtO-Ekv4Jq6-QUTRCWxXklSjiPEUsVHmq4aMOBH1CDkf3PgM8wRQu3o0Mc_llKZ287JPotaarjTQKEnWXTedre1rgD5-Z1sPVp4eG96AlcimzOqkJmQQIDLIgS3d8X9E9WFjD20BWbVrMssNYKok3QsbFeoHalU2kSscusrmuOKflwig"/>
+<div class="absolute inset-0 bg-gradient-to-t from-surface via-transparent to-transparent"></div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Phase 3: Social Proof Section (The Intelligence Report) -->
+<section class="py-32 bg-surface-container-lowest">
+<div class="max-w-7xl mx-auto px-8">
+<div class="text-center mb-24">
+<div class="inline-block px-4 py-1 bg-outline-variant/15 font-headline text-[10px] tracking-[0.3em] mb-4 text-secondary uppercase">OPERATIONAL INTELLIGENCE</div>
+<h2 class="font-headline text-5xl font-bold tracking-tighter text-on-background uppercase">REVENUE AGGREGATE</h2>
+<div class="text-[12rem] font-black tracking-tighter leading-none text-transparent bg-clip-text bg-gradient-to-b from-[#F0F0F0] to-surface-container-high select-none">$1.2M+</div>
+<p class="font-label tracking-widest uppercase text-outline mt-[-2rem]">TOTAL OPERATIVE EARNINGS (Q1-Q3 2024)</p>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-12">
+<!-- Testimonial 1 -->
+<div class="relative p-8 bg-surface border-l-4 border-primary-container shadow-2xl">
+<div class="flex justify-between items-start mb-6">
+<div class="uppercase font-headline text-[10px] tracking-widest text-outline">CLASSIFIED // OPERATIVE 82</div>
+<div class="bg-primary/20 text-primary px-3 py-1 rounded text-[10px] font-bold">VERIFIED</div>
+</div>
+<p class="font-body italic text-on-surface-variant mb-8 leading-relaxed">"The transition from standard marketing to the Obsidian framework was immediate. My KDP revenue tripled within 45 days of implementation."</p>
+<div class="flex items-center gap-4">
+<div class="w-10 h-10 bg-surface-container-high rounded-full overflow-hidden grayscale">
+<img alt="Operative" data-alt="close-up portrait of a serious man in professional attire with dramatic shadows and dark background" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAfa9FIHTt4B6sR1Tzv6mCRDxgsR0VUN4EMtWCScIwmo5TznmrCg4UaWKZwNaaAMj_Grl93lZ1fkqvwlXn8kdsNv8FhspI9ykioiAAR8ZiwmhFxezF0eVnXDbF91MJha7_Iq6Rwe2Dxwx3386Q4eBihGfRFhyDBH-_PXiV7tIS4Kh8eCEZGxZAlotdVyVtwB0PEM8iUgFAQQl3yt2J6JPBKk08-rHjWPqOXI_zEtx31PlZIXyjyVT8SRI1MaR8iWTiV0_f1xvmyR_0"/>
+</div>
+<div class="font-headline text-xs tracking-widest text-[#F0F0F0] uppercase">Sector: E-Commerce</div>
+</div>
+</div>
+<!-- Testimonial 2 -->
+<div class="relative p-8 bg-surface border-l-4 border-secondary-container shadow-2xl">
+<div class="flex justify-between items-start mb-6">
+<div class="uppercase font-headline text-[10px] tracking-widest text-outline">CLASSIFIED // OPERATIVE 14</div>
+<div class="bg-primary/20 text-primary px-3 py-1 rounded text-[10px] font-bold">VERIFIED</div>
+</div>
+<p class="font-body italic text-on-surface-variant mb-8 leading-relaxed">"Prompt engineering was the missing link. We've automated 60% of our creative workflow without losing quality. Unprecedented ROI."</p>
+<div class="flex items-center gap-4">
+<div class="w-10 h-10 bg-surface-container-high rounded-full overflow-hidden grayscale">
+<img alt="Operative" data-alt="close-up portrait of a confident woman executive with strong lighting and professional studio background" src="https://lh3.googleusercontent.com/aida-public/AB6AXuC_tDBJrK0LjY6zU68TKwkzqJsKlrecb3tQCI1nIvhh66XPjWFRox6Frk7prNoFMG3sKQ0imowS_eyL7kqvuVa2Bx48jN0em5MWEyIGyfYRUsrOyYvPgtMh1bwAsvMaUhVgq6JjCo-RAWbfzoptU-d2EB1TD7ebDoSXnKS-ftAZpINCGuJQtEm5_TU_3Vxql6hOKPFLADc8HBQ3zWp_zWAKsfmeTicq7lHasT0nsHVzzIgMdgq1lfmNWTpLLNR9jMTpydtD1SxEi4A"/>
+</div>
+<div class="font-headline text-xs tracking-widest text-[#F0F0F0] uppercase">Sector: AI Architecture</div>
+</div>
+</div>
+<!-- Testimonial 3 -->
+<div class="relative p-8 bg-surface border-l-4 border-outline-variant shadow-2xl">
+<div class="flex justify-between items-start mb-6">
+<div class="uppercase font-headline text-[10px] tracking-widest text-outline">CLASSIFIED // OPERATIVE 09</div>
+<div class="bg-primary/20 text-primary px-3 py-1 rounded text-[10px] font-bold">VERIFIED</div>
+</div>
+<p class="font-body italic text-on-surface-variant mb-8 leading-relaxed">"The sovereign architect mindset changed everything. I stopped chasing clients and started building assets. My agency is now self-sustaining."</p>
+<div class="flex items-center gap-4">
+<div class="w-10 h-10 bg-surface-container-high rounded-full overflow-hidden grayscale">
+<img alt="Operative" data-alt="professional headshot of a man with focused expression against a dark textured wall" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCOqnGNr7u0D5hql1-SaanbEfGeoOuz68vSV0xcK1EYD_J3PQRQTQfUmvB0vBjeMVsCHzV9znUAqeBe-a2r8nLILeRPfq-nl4Ux1849fu5x0EifbF51PRwZlW4kvZswfl35Q0MV53SkRxHygqUsA0iBZOzEodVQde6LI_Zyfcwglk_SWxSUKw3iiFXQAhfkIoiJzK_2T30RdnpgX4P-nMttEwKTJwUzfQXWw5pwqDsEsL6-fP_G8dnWJzmAfbL0aheOx5Y7ZhauS-Q"/>
+</div>
+<div class="font-headline text-xs tracking-widest text-[#F0F0F0] uppercase">Sector: Full-Stack Marketing</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Final CTA Area -->
+<section class="py-32 relative overflow-hidden">
+<div class="absolute inset-0 bg-primary-container/5"></div>
+<div class="max-w-4xl mx-auto px-8 text-center relative z-10">
+<h2 class="font-headline text-6xl font-black tracking-tighter mb-8 uppercase">ASCEND TO COMMAND</h2>
+<p class="text-on-surface-variant text-xl mb-12 font-light">The protocol is open for a limited selection of new operatives. Will you remain part of the noise, or will you architect the signal?</p>
+<div class="flex flex-col md:flex-row gap-6 justify-center">
+<button class="px-12 py-5 bg-primary-container text-on-primary-container font-headline font-bold text-lg tracking-widest uppercase hover:scale-105 transition-all">
+                    REQUEST ACCESS
+                </button>
+<button class="px-12 py-5 border border-outline text-on-background font-headline font-bold text-lg tracking-widest uppercase hover:bg-on-background hover:text-surface-container-lowest transition-all">
+                    VIEW REPUTATION
+                </button>
+</div>
+</div>
+</section>
+<!-- Footer -->
+<footer class="bg-[#0e0e0e] w-full py-12 border-t border-[#444557]/15 flex flex-col items-center justify-center gap-6 px-10">
+<div class="flex flex-wrap justify-center gap-8 mb-4">
+<a class="font-headline uppercase tracking-widest text-[10px] text-[#8e8fa3] hover:text-[#dcb8ff] transition-colors" href="#">ACCREDITED EXCELLENCE</a>
+<a class="font-headline uppercase tracking-widest text-[10px] text-[#8e8fa3] hover:text-[#dcb8ff] transition-colors" href="#">GLOBAL REACH (15+ COUNTRIES)</a>
+<a class="font-headline uppercase tracking-widest text-[10px] text-[#8e8fa3] hover:text-[#dcb8ff] transition-colors" href="#">SECURITY PROTOCOLS</a>
+<a class="font-headline uppercase tracking-widest text-[10px] text-[#8e8fa3] hover:text-[#dcb8ff] transition-colors" href="#">TERMS OF ENGAGEMENT</a>
+</div>
+<div class="text-[#F0F0F0] font-bold font-headline text-xl tracking-tighter mb-2">OBSIDIAN PROTOCOL</div>
+<p class="font-headline uppercase tracking-widest text-[10px] text-[#8e8fa3] text-center">
+            © 2024 OBSIDIAN PROTOCOL. ALL RIGHTS RESERVED. SOVEREIGN ARCHITECT GRADE.
+        </p>
+</footer>
+<!-- Fixed Floating WhatsApp CTA -->
+<div class="fixed bottom-8 right-8 z-[100] group flex flex-col items-end gap-3">
+<div class="bg-surface-container-high px-4 py-2 rounded-lg border border-outline-variant opacity-0 group-hover:opacity-100 transition-opacity flex items-center gap-3">
+<span class="relative flex h-3 w-3">
+<span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-green-400 opacity-75"></span>
+<span class="relative inline-flex rounded-full h-3 w-3 bg-green-500"></span>
+</span>
+<span class="text-[10px] font-label font-bold text-on-surface tracking-widest uppercase">Support Online</span>
+</div>
+<button class="w-16 h-16 bg-[#25D366] rounded-full flex items-center justify-center text-white shadow-2xl hover:scale-110 transition-transform active:scale-95">
+<svg class="w-8 h-8 fill-current" viewbox="0 0 24 24">
+<path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"></path>
+</svg>
+</button>
+</div>
+</body></html>
